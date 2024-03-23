@@ -14,19 +14,18 @@ SRC_REPO = "textSummarizer"     # Name in our config folder
 AUTHOR_EMAIL = "kumar.lavish.0109@gmail.com"
 
 setuptools.setup(
-    name=REPO_NAME,
+    name=SRC_REPO,
     version=__version__,
     author=AUTHOR_USER_NAME,
     author_email=AUTHOR_EMAIL,
     description="Text Summarizer",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/loobiish/Text-Summarizer",
-    packages=setuptools.find_packages(),
-    classifiers=[
-        "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent",
-    ],
+    url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
+    project_urls={
+        "Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",
+    },
+    package_dir={"": "src"},
+    packages=setuptools.find_packages(where="src")
 )
 
