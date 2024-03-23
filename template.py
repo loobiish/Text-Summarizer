@@ -24,10 +24,10 @@ list_of_files = [
     f"src/{project_name}/constant/__init_.py",
     "config/config.yaml",
     "params.yaml",
-    "app.py"
+    "app.py",
     "main.py",
-    "Dockerfile"
-    "requirements.txt"
+    "Dockerfile",
+    "requirements.txt",
     "setup.py",
     "research/trials.ipynb"
 ]
@@ -41,7 +41,7 @@ for filepath in list_of_files:
         os.makedirs(filedir, exist_ok=True) # creating directories recursively
         logging.info(f"Creating directory: {filedir} for file: {filename}")
     
-    # Check if file exists or not    
+    # Check if file exists or not
     if (not os.path.exists(filepath)) or (os.path.getsize(filepath) == 0):
         with open(filepath, 'w') as f:
             pass
