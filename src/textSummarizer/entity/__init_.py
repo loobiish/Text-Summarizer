@@ -1,3 +1,6 @@
+import os
+import sys
+sys.path.append('src')
 from dataclasses import dataclass
 from pathlib import Path
 
